@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: telegram_forward_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    volumes:
+      - ./logs:/app/logs
+
+  mongodb:
+    image: mongo:6.0
+    container_name: forward_bot_mongodb
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongo_data:

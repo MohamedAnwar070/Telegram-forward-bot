@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Telegram session files (CRITICAL: Never commit session credentials)
+*.session
+*.session-journal
+forward_bot_prod.session
+user_sync_worker.session
+
+# Environment variables & secrets
+.env
+.env.local
+*.secret
+*.key
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Database & local data
+*.db
+*.sqlite
+*.sqlite3
+mongo-data/
+
+# Logs
+*.log
+logs/
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
